@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>
+		
+            Sanscript | Learn Sanskrit Online
+		
+		</title>
+		
+        <meta name="description" content="A simple and complete guide to Sanskrit. Includes useful tools and resources for all levels." />
+		
+
+		<link rel="shortcut icon" href="../static/favicon.png" />
+        
+        <link rel="stylesheet" type="text/css" href="../static/gen/style-all.css%3F102032ec.css" />
+        
+        
+<style type="text/css">
+    kbd { 
+        font-size: 16px;
+    }
+    select {
+        background: #fff;
+        border-radius: 5px;
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        border: 1px #ddd solid;
+    }
+    article { 
+        max-width: 960px;
+        width: 100%;
+        margin: auto;
+        padding: 0.5rem;
+    }
+    textarea {
+        display: block;
+        border: 1px #ddd solid;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .sc-interface {
+        margin: auto;
+        background: #d4d8d9;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+    .sc-pane {
+        flex: 1 1 auto;
+    }
+    .sc-buttons {
+        width: 4em;
+        flex-direction: column;
+        padding: 0 0.2rem
+    }
+    .sc-buttons .spacer {
+        height: 2.5rem;
+    }
+    .sc-buttons input {
+        display: block;
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+    }
+    .sc-buttons input {
+        cursor: pointer;
+    }
+    #run {
+        font-size: 3rem;
+        background: #76c876;
+        color: #fff;
+        flex: 1 1 auto;
+    }
+    #run:hover { background: #65ae65; }
+    #swap { height: 1.5rem; }
+    #swap:hover { background: #d7d7d7; }
+    #tabs {
+        padding: 0;
+        list-style: none;
+        display: flex;
+    }
+    .hide { display: none; }
+    #tabs {
+        border-bottom: 1px #ddd solid;
+    }
+    #tabs a {
+        padding: 0.5rem;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+
+        border: 1px #ddd solid;
+        border-bottom: 0;
+        border-left-width: 0;
+    }
+    #tabs a, #tabs a:hover {
+        background: #f7f7f7;
+    }
+    #tabs a.selected {
+        background: #fff;
+        border-bottom: 1px #fff solid;
+        position: relative;
+        top: 1px;
+    }
+    #tabs li:first-child {
+        border-left-width: 1px;
+    }
+    .letter-map {
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+    .letter-map ul {
+        display: flex;
+        padding: 0;
+        list-style: none;
+        justify-content: space-between;
+    }
+    .letter-map span {
+        display: block;
+        font-size: 1.5rem;
+        color: #c00;
+    }
+    .letter-map .none {
+        color: #777;
+        font-size: 0.8rem;
+    }
+</style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer data-domain="learnsanskrit.org" src="https://plausible.io/js/plausible.js"></script>
+	</head>
+	<body>
+        
+<header class="default">
+<nav class="main dn db-ns">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../guide.html">Grammar</a></li>
+    <li><a href="../tools.html">Tools</a></li>
+    <li><a href="../resources.html">Resources</a></li>
+    <li><a href="../contact.html" class="special">Contact</a></li>
+  </ul>
+</nav>
+<nav class="main db dn-ns">
+  <a href="../mobile/menu/index.html">Menu</a>
+</nav>
+</header>
+
+<article>
+<h1 class="mb3">Sanscript</h1>
+
+<noscript>
+    <p><i>To use Sanscript, you must have Javascript enabled.</i></p>
+</noscript>
+
+<form name="sanscript" autocomplete="off">
+<div class="sc-interface df">
+  
+  <div class="sc-pane">
+    <label>Input:</label>
+    <select name="inputSelect" title="Choose your input format.">
+      
+<optgroup label="Indian">
+    <option value="devanagari"
+        >Devanagari (अ)</option>
+    <option value="bengali">Bengali (অ)</option>
+    <option value="gurmukhi">Gurmukhi (ਅ)</option>
+    <option value="gujarati">Gujarati (અ)</option>
+    <option value="oriya">Oriya (ଅ)</option>
+    <option value="tamil">Tamil (அ)</option>
+    <option value="telugu">Telugu (అ)</option>
+    <option value="kannada">Kannada (ಅ)</option>
+    <option value="malayalam">Malayalam (അ)</option>
+</optgroup>
+<optgroup label="Roman">
+    <option value="iast">IAST</option>
+    <option value="kolkata">Kolkata</option>
+    <option value="itrans"
+        selected="selected">ITRANS</option>
+    <option value="hk">Harvard-Kyoto</option>
+    <option value="slp1">SLP</option>
+</optgroup>
+
+    </select>
+    <textarea name="input" rows="20"
+      title="Enter your text here."></textarea>
+  </div>
+
+  
+  <div class="sc-buttons df">
+    <div class="spacer"></div>
+    <input type="button" value="➠" title="Click to transliterate."
+      id="run" />
+    <input type="button" value="↔" title="Click to swap the left and right sides."
+      id="swap" />
+  </div>
+
+  
+  <div class="sc-pane">
+    <label>Output:</label>
+    <select name="outputSelect" title="Choose your output format.">
+      
+<optgroup label="Indian">
+    <option value="devanagari"
+        selected="selected">Devanagari (अ)</option>
+    <option value="bengali">Bengali (অ)</option>
+    <option value="gurmukhi">Gurmukhi (ਅ)</option>
+    <option value="gujarati">Gujarati (અ)</option>
+    <option value="oriya">Oriya (ଅ)</option>
+    <option value="tamil">Tamil (அ)</option>
+    <option value="telugu">Telugu (అ)</option>
+    <option value="kannada">Kannada (ಅ)</option>
+    <option value="malayalam">Malayalam (അ)</option>
+</optgroup>
+<optgroup label="Roman">
+    <option value="iast">IAST</option>
+    <option value="kolkata">Kolkata</option>
+    <option value="itrans"
+        >ITRANS</option>
+    <option value="hk">Harvard-Kyoto</option>
+    <option value="slp1">SLP</option>
+</optgroup>
+
+    </select>
+    <textarea name="output" rows="20"
+      title="This is where your output will appear!"></textarea>
+  </div>
+</div>
+
+<ul id="tabs">
+  <li><a href="sanscript.html#intro">Introduction</a></li>
+  <li><a href="sanscript.html#map">Transliteration map</a></li>
+  <li><a href="sanscript.html#options">Options</a></li>
+</ul>
+
+<div class="tabContent" id="intro">
+<p><dfn>Sanscript</dfn> transliterates Sanskrit text from one script to
+another. Here's how to use it:</p>
+
+<ol>
+    <li>Select an <i>Input</i> script and an <i>Output</i> script.</li>
+    <li>Place your text in the left box.</li>
+    <li>Click the green button.</li>
+</ol>
+
+<p>Type <kbd>##</kbd> to disable transliteration and <kbd>##</kbd> to enable it
+again:</p>
+
+<ul class="examples">
+    <li>
+        <kbd>bhagavad ##(divine one)## gItA</kbd>
+        &rarr;
+        भगवद् (divine one) गीता 
+    </li>
+</ul>
+
+<p>You can also disable transliteration for just one character by typing
+<kbd>\</kbd>:</p>
+
+<ul class="examples">
+    <li>
+        <kbd>bhagavad . gItA\.</kbd> &rarr; भगवद् । गीता.
+    </li>
+    <li>
+        <kbd>dharmakShetre \## kurukShetre</kbd>
+        &rarr;  धर्मक्षेत्रे ## कुरुक्षेत्रे
+    </li>
+    <li>
+        <kbd>a \a \\ A \A</kbd>
+        &rarr; अ a \ आ A
+    </li>
+</ul>
+
+<p>If you are inputting ITRANS, type <kbd>{}</kbd> or <kbd>_</kbd> to break up a
+conjunct consonant:</p>
+<ul class="examples">
+    <li>kShetra k{}Shetra &rarr; क्षेत्र क्‍षेत्र</li>
+    <li>barau bara_u &rarr; बरौ बर‍उ</li>
+</ul>
+
+<p>If you click the double arrows <span style="font-size: 1.2em;
+font-family: Sans-Serif; line-height: 0.83em;">↔</span>, the left and right
+sides are switched.</p>
+
+<p>You can download the code <a
+    href="https://github.com/sanskrit/sanscript">here</a>.</p>
+
+
+</div>
+
+<div class="tabContent" id="map">
+<div class="letter-map">
+    <div id="m-vowels">
+        
+<ul><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/><li/><li/></ul>
+
+    </div>
+    <div id="m-other_marks">
+        
+<ul><li/><li/><li/></ul>
+
+    </div>
+    <div id="m-consonants">
+        
+<ul><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/></ul>
+
+    </div>
+    <div id="m-symbols">
+        
+<ul><li/><li/><li/><li/><li/><li/><li/><li/><li/><li/></ul>
+
+        
+<ul><li/><li/><li/><li/></ul>
+
+    </div>
+    <div id="m-other">
+        
+<ul><li/><li/><li/><li/><li/><li/><li/><li/><li/></ul>
+
+    </div>
+</div>
+</div>
+
+<div class="tabContent" id="options">
+<h2>Options</h2>
+<p>How should Sanscript transliterate to Devanagari? Choose an option below:</p>
+<ul>
+<li><input type="radio" name="oHind" value="0" checked="checked"/> ajay <span class="textBlueArrow">➠</span> <span class="big">अजय् &nbsp;</span> (Sanskrit)</li>
+<li><input type="radio" name="oHind" value="1" /> ajay <span class="textBlueArrow">➠</span> <span class="big">अजय &nbsp;</span> (Hindi/Marathi)</li>
+</ul>
+<p>Regardless of your choice, you can always type <dfn>.h</dfn> in ITRANS to do "Sanskrit-style" transliteration.</p>
+</div>
+
+<script typet"text/javascript">
+    const run = document.querySelector('#run');
+    const swap = document.querySelector('#swap');
+    const inputSelect = document.querySelector('select[name=inputSelect]');
+    const outputSelect = document.querySelector('select[name=outputSelect]');
+    const inputText = document.querySelector('textarea[name=input]');
+    const outputText = document.querySelector('textarea[name=output]');
+
+    function runSanscript() {
+        const from = inputSelect.value;
+        const to = outputSelect.value;
+        const hindiButton = document.querySelector('input[name=oHind]:checked')
+        const options = {
+            "syncope": hindiButton.value === '1',
+        }
+        outputText.value = Sanscript.t(inputText.value, from, to, options);
+    }
+
+    function updateMap() {
+        const from = inputSelect.value;
+        const to = outputSelect.value;
+        // TODO: hacked Sanscript to expose schemes.
+        const fromMap = Sanscript.schemes[from];
+        const toMap = Sanscript.schemes[to];
+
+        // Defaults if not present.
+        const defaultOther = ["", "", "", "", "", "", "", "", ""];
+        fromMap.other = fromMap.other || defaultOther;
+        toMap.other = toMap.other || defaultOther;
+
+        const props = ['vowels', 'consonants', 'other_marks', 'symbols', 'other'];
+        for (let i = 0; i < props.length; i++) {
+            const prop = props[i];
+            const lis = document.querySelectorAll(`#m-${prop} li`);
+            for (let j = 0; j < fromMap[prop].length; j++) {
+                const f = fromMap[prop][j] || '<span class="none">[none]</span>';
+                const t = toMap[prop][j] || '<span class="none">[none]</span>';
+                lis[j].innerHTML = (`<span>${t}</span>${f}`);
+            }
+        }
+    }
+
+    function swapSides() {
+        let temp = inputSelect.value;
+        inputSelect.value = outputSelect.value;
+        outputSelect.value = temp;
+
+        temp = inputText.value;
+        inputText.value = outputText.value;
+        outputText.value = temp;
+
+        updateMap();
+    }
+
+    // Bindings
+    run.onclick = runSanscript;
+    swap.onclick = swapSides;
+    outputText.onclick = runSanscript;
+    inputSelect.onchange = updateMap;
+    outputSelect.onchange = updateMap;
+
+    window.addEventListener('load', (e) => {
+        updateMap();
+    });
+</script>
+
+<script type="text/javascript">
+// Inlining -- not used elsewhere.
+var tabLinks=new Array();var contentDivs=new Array();function init(){var a=document.getElementById('tabs').childNodes;for(var i=0;i<a.length;i++){if(a[i].nodeName=="LI"){var b=getFirstChildWithTagName(a[i],'A');var c=getHash(b.getAttribute('href'));tabLinks[c]=b;contentDivs[c]=document.getElementById(c)}}var i=0;for(var c in tabLinks){tabLinks[c].onclick=showTab;tabLinks[c].onfocus=function(){this.blur()};if(i==0)tabLinks[c].className='selected';i++}var i=0;for(var c in contentDivs){if(i!=0)contentDivs[c].className='tabContent hide';i++}}function showTab(){var a=getHash(this.getAttribute('href'));for(var b in contentDivs){if(b==a){tabLinks[b].className='selected';contentDivs[b].className='tabContent'}else{tabLinks[b].className='';contentDivs[b].className='tabContent hide'}}return false}function getFirstChildWithTagName(a,b){for(var i=0;i<a.childNodes.length;i++){if(a.childNodes[i].nodeName==b)return a.childNodes[i]}}function getHash(a){var b=a.lastIndexOf('#');return a.substring(b+1)}window.onload=function(){init()}
+</script>
+
+
+        
+        
+        <script type="text/javascript" src="../static/gen/main.js%3Faedd17b5"></script>
+        
+        
+	</body>
+</html>

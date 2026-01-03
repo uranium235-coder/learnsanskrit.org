@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>
+		
+            ac sandhi | Learn Sanskrit Online
+		
+		</title>
+		
+        <meta name="description" content="A simple and complete guide to Sanskrit. Includes useful tools and resources for all levels." />
+		
+
+		<link rel="shortcut icon" href="../../../static/favicon.png" />
+        
+        <link rel="stylesheet" type="text/css" href="../../../static/gen/style-all.css%3F102032ec.css" />
+        
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer data-domain="learnsanskrit.org" src="https://plausible.io/js/plausible.js"></script>
+	</head>
+	<body>
+        
+
+
+
+<nav class="breadcrumbs">
+
+<div class="db dn-ns">
+    <a href="../../index.html"><span lang="sa" class="sa2">vyākaraṇa-praveśaḥ</span></a>
+    <div style="float: right">
+    
+
+<a href="../vidhi-rules/index.html">&larr;</a>
+
+ |
+    
+
+<a href="../the-asiddha-section/index.html">&rarr;</a>
+
+
+    </div>
+</div>
+
+
+<div class="dn db-ns">
+    <a href="../../../index.html">Home</a> &raquo;
+    <a href="../../index.html"><span lang="sa" class="sa2">vyākaraṇa</span></a> &raquo;
+    
+        <a href="../index.html">Sounds</a> &raquo;
+        <b><span lang="sa" class="sa2">ac</span> sandhi</b>
+    
+
+    <div style="float: right;">
+    
+
+<a href="../vidhi-rules/index.html">&larr; previous</a>
+
+ |
+    
+
+<a href="../the-asiddha-section/index.html">next &rarr;</a>
+
+
+    </div>
+</div>
+</nav>
+
+
+<main style="margin-top: 3em;">
+  
+  
+  <div>
+    <nav class="pa3 f6" style="color: #777; text-align: right">
+<label>Large script:</label>
+<select id="switch-sa1" onchange="switchSa1(this.value)">
+    <option value="devanagari" selected>Devanagari</option>
+    <option value="kannada">Kannada</option>
+    <option value="telugu">Telugu</option>
+    <option value="iast">Roman</option>
+</select>
+
+<br />
+
+<label>Small script:</label>
+<select id="switch-sa2" onchange="switchSa2(this.value)">
+    <option value="devanagari">Devanagari</option>
+    <option value="kannada">Kannada</option>
+    <option value="telugu">Telugu</option>
+    <option value="iast" selected>Roman</option>
+</select>
+</nav>
+    <article class="mt5 mb5 pa2 readable">
+    <h1><span lang="sa" class="sa2">ac</span> sandhi</h1><p><dfn><span lang="sa" class="sa2">ac</span> sandhi</dfn> is the general name for sandhi changes that involve two
+vowels. For example, the rule we studied in the previous lesson is an example
+of <span lang="sa" class="sa2">ac</span> sandhi:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">इको यणचि। ६.१.७७</span><br><span lang="sa" class="sa2">iko yaṇaci</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/77" target="_blank">6.1.77</a>)<br><span lang="sa" class="sa2">ikaḥ yaṇ aci</span><br>An <span lang="sa" class="sa2">ik</span> vowel is replaced by its respective <span lang="sa" class="sa2">yaṇ</span> sound when a vowel follows [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p><span lang="sa" class="sa2">ac</span> sandhi has many rules of varying importance. Some are truly minor, and
+others are important general patterns. Here, we will focus on the important
+general patterns and complete our basic picture of <span lang="sa" class="sa2">ac</span> sandhi.</p><p>But there is also an important issue we should address: rule 6.1.77 has a
+serious flaw. In Sanskrit, two similar vowels should combine and become long:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">द्रौपदी इन्द्रम् अपश्यत् → द्रौपदीन्द्रम् अपश्यत्</span><br><span lang="sa" class="sa2">draupadī indram apaśyat → draupadīndram apaśyat</span><br>Draupadi saw Indra.<br></p></li></ul></p><p>But rule 6.1.77 will produce an error:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">द्रौपदी इन्द्रम् अपश्यत् → * <mark>द्रौपद्यिन्द्रम्</mark> अपश्यत्</span><br><span lang="sa" class="sa2">draupadī indram apaśyat → * <mark>draupadyindram</mark> apaśyat</span><br>Draupadi saw Indra.<br></p></li></ul></p><p>So in addition to completing our basic picture of <span lang="sa" class="sa2">ac</span> sandhi, we will also 
+ensure that our system handles the example above correctly.</p><p>As in the previous lesson, the rules below will borrow context from the <span lang="sa" class="sa2">adhikāra</span> rule 6.1.72:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">संहितायाम्। ६.१.७२</span><br><span lang="sa" class="sa2">saṃhitāyām</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/72" target="_blank">6.1.72</a>)<br><span lang="sa" class="sa2">saṃhitāyām </span><br>In <span lang="sa" class="sa2">saṃhitā</span>, &hellip;</p></li></ul></p><h2><span lang="sa" class="sa2">ec</span> as first vowel</h2><p>Once we understand rule 6.1.77 (<span lang="sa" class="sa2">iko yaṇaci</span>), we can easily understand 6.1.78:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">एचो ऽयवायावः। ६.१.७८</span><br><span lang="sa" class="sa2">eco 'yavāyāvaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/78" target="_blank">6.1.78</a>)<br><span lang="sa" class="sa2">ecaḥ ay-av-āy-āvaḥ</span><br>An <span lang="sa" class="sa2">ec</span> vowel becomes <span lang="sa" class="sa2">ay</span>, <span lang="sa" class="sa2">av</span>, <span lang="sa" class="sa2">āy</span>, or <span lang="sa" class="sa2">āv</span>, respectively [when a vowel follows in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p>So we get sandhi changes like this:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">ने + अ → नय</span><br><span lang="sa" class="sa2">ne + a → naya</span><br>lead<br></p></li><li><p><span lang="sa" class="sa1">भो + अ → भव</span><br><span lang="sa" class="sa2">bho + a → bhava</span><br>become<br></p></li></ul></p><p>Rule 6.1.78 is nice and simple. Now let's turn to the rules where <span lang="sa" class="sa2">a</span> is
+first:</p><h2><span lang="sa" class="sa2">a</span> as first vowel</h2><p>In Sanskrit, <span lang="sa" class="sa2">a</span> will combine with most vowels to form a compound vowel:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">सीता इन्द्रम् अपश्यत् → सीतेन्द्रम् अपश्यत्</span><br><span lang="sa" class="sa2">sītā indram apaśyat → sītendram apaśyat</span><br>Sita saw Indra.<br></p></li></ul></p><p>Here, one vowel (<span lang="sa" class="sa2">e</span>) replaces two vowels (<span lang="sa" class="sa2">ā</span> and <span lang="sa" class="sa2">i</span>). How might we
+model this behavior with our rules?</p><p>Pāṇini approaches this problem by creating a new <span lang="sa" class="sa2">adhikāra</span> rule:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">एकः पूर्वपरयोः। ६.१.८४</span><br><span lang="sa" class="sa2">ekaḥ pūrvaparayoḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/84" target="_blank">6.1.84</a>)<br><span lang="sa" class="sa2">ekaḥ pūrva-parayoḥ</span><br>A single [term] is substituted for the previous and following.</p></li></ul></p><p>What does this rule mean? Recall that we represent &ldquo;previous&rdquo; terms with the
+fifth case and &ldquo;following&rdquo; terms with the seventh. So, this rule means that in
+the scope of this <span lang="sa" class="sa2">adhikāra</span> rule, terms in the fifth and seventh case are
+both replaced by a single term.</p><p>With this context in place, we can model what happens when <span lang="sa" class="sa2">a</span> is the first
+vowel. In general, the change is simple. With the help of a new term:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">अदेङ्गुणः। १.१.२</span><br><span lang="sa" class="sa2">adeṅguṇaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/1/1/2" target="_blank">1.1.2</a>)<br><span lang="sa" class="sa2">at-eṅ guṇaḥ</span><br>The vowels <span lang="sa" class="sa2">a</span>, <span lang="sa" class="sa2">e</span><span lang="sa" class="sa2">, and </span><span lang="sa" class="sa2">o</span> are called <span lang="sa" class="sa2">guṇa</span>.</p></li></ul></p><p>we can define our rule:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">आद्गुणः। ६.१.८७</span><br><span lang="sa" class="sa2">ādguṇaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/87" target="_blank">6.1.87</a>)<br><span lang="sa" class="sa2">āt guṇaḥ</span><br><span lang="sa" class="sa2">a</span> [and the following vowel] become [a single] <span lang="sa" class="sa2">guṇa</span> [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p>But if the second vowel is a compound vowel, we use a slightly different rule.
+Again, we define a new term:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">वृद्धिरादैच्। १.१.१</span><br><span lang="sa" class="sa2">vṛddhirādaic</span> (<a href="https://ashtadhyayi.com/sutraani/1/1/1" target="_blank">1.1.1</a>)<br><span lang="sa" class="sa2">vṛddhiḥ āt-aic</span><br>The vowels <span lang="sa" class="sa2">ā</span>, <span lang="sa" class="sa2">ai</span>, and <span lang="sa" class="sa2">au</span> are called <span lang="sa" class="sa2">vṛddhi</span>.</p></li></ul></p><p>And use it in our rule:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">वृद्धिरेचि। ६.१.८८</span><br><span lang="sa" class="sa2">vṛddhireci</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/88" target="_blank">6.1.88</a>)<br><span lang="sa" class="sa2">vṛddhiḥ eci</span><br>[<span lang="sa" class="sa2">a</span> and the following] <span lang="sa" class="sa2">ec</span> vowel become [a single] <span lang="sa" class="sa2">vṛddhi</span> [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p>The terms <span lang="sa" class="sa2">guṇa</span> and <span lang="sa" class="sa2">vṛddhi</span> are important and will be used throughout the
+grammar. We will return to them later on.</p><aside class="true-aside"><h2>Some notes on rule 1.1.1</h2><p>Let's pause on rule 1.1.1 for a moment. This is the first rule of the entire
+<cite>Aṣṭādhyāyī</cite>. And to understand it, we must understand all of the
+following:</p><ul><li><p>the Shiva Sutras</p></li>
+    <li><p>the definition of a <span lang="sa" class="sa2">pratyāhāra</span></p></li>
+    <li><p>the fact that <span lang="sa" class="sa2">a</span> (in the <span lang="sa" class="sa2">pratyāhāra</span>) refers to both short <span lang="sa" class="sa2">a</span>
+    and long <span lang="sa" class="sa2">ā</span></p></li>
+    <li><p>the definition of <span lang="sa" class="sa2">t</span> when it follows a vowel</p></li>
+</ul><p>This is part of why it is so difficult to enter into the Pāṇinian system and
+understand how it works. (If we have made it easier, please do
+<a href="../../../contact.html">let us know</a>.)
+</p></aside><h2>Substitution with the closest option</h2><p>Unfortunately, rules 6.1.87 and 6.1.88 have a problem that we've seen before:
+these rules don't tell us which specific vowel to use. We know what the correct
+result should be, but these rules allow some clearly incorrect results. For
+example, we could apply rule 6.1.87:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">सीता इन्द्रम् अपश्यत् → * <mark>सीतोन्द्रम्</mark> अपश्यत्</span><br><span lang="sa" class="sa2">sītā indram apaśyat → * <mark>sītondram</mark> apaśyat</span><br>Sita saw Indra.<br></p></li></ul></p><p>To prevent such results, Pāṇini offers this rule to help us perform the correct
+substitution:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">स्थाने ऽन्तरतमः। १.१.५०</span><br><span lang="sa" class="sa2">sthāne 'ntaratamaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/1/1/50" target="_blank">1.1.50</a>)<br><span lang="sa" class="sa2">sthāne antaratamaḥ</span><br>In substitution, the closest [is preferred].</p></li></ul></p><p>Roughly, &ldquo;closeness&rdquo; refers to properties like places of articulation,
+semantics, and so on. Since these rules are about sounds, the closest
+replacement is the one that matches the places of articulation of the sounds
+being replaced.</p><p>If we return to our example above:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">सीता इन्द्रम् अपश्यत् → ???</span><br><span lang="sa" class="sa2">sītā indram apaśyat → ???</span><br>Sita saw Indra.<br></p></li></ul></p><p>We must choose which <span lang="sa" class="sa2">guṇa</span> vowel to use, per 6.1.87 (<span lang="sa" class="sa2">ādguṇaḥ</span>). Since <span lang="sa" class="sa2">ā</span> is
+pronounced at the soft palate and <span lang="sa" class="sa2">i</span> is pronounced at the hard palate, we
+just need to find which sound is the best match:</p><ul><li><p>short <span lang="sa" class="sa2">a</span> uses just one of these places of articulation, so it is not a good
+  match.</p></li>
+  <li><p><span lang="sa" class="sa2">et</span> uses both of these places of articulation, so it is a good match.</p></li>
+  <li><p><span lang="sa" class="sa2">o</span> uses the soft palate, but it uses the lips instead of the hard
+  palate. So <span lang="sa" class="sa2">o</span> is not a good match.</p></li>
+</ul><p>Thus <span lang="sa" class="sa2">e</span> is the best option:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">अ + इ → ए</span><br><span lang="sa" class="sa2">a + i → e</span><br></p></li></ul></p><p>And likewise, <span lang="sa" class="sa2">o</span> is better if the combination is <span lang="sa" class="sa2">a</span> and <span lang="sa" class="sa2">u</span>:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">अ + उ → ओ</span><br><span lang="sa" class="sa2">a + u → o</span><br></p></li></ul></p><h2>Addition of <span lang="sa" class="sa2">r</span></h2><p>The rules above seem to work as intended. But if we test this rule against our
+Sanskrit knowledge, we find another problem. In Sanskrit, <span lang="sa" class="sa2">ṛ</span> has no compound
+vowel. Instead, it combines with <span lang="sa" class="sa2">a</span> with some help from the semivowel <span lang="sa" class="sa2">r</span>:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">सीता ऋच्छति → सीतर्च्छति</span><br><span lang="sa" class="sa2">sītā ṛcchati → sītarcchati</span><br>Sita goes.<br></p></li></ul></p><p>But with our current system, rule 6.1.87 (<span lang="sa" class="sa2">ādguṇaḥ</span>) can hardly function. <span lang="sa" class="sa2">at</span>
+seems like the closest <span lang="sa" class="sa2">guṇa</span> vowel, but this produces a bad result:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">सीता ऋच्छति → * <mark>सीतच्छति</mark></span><br><span lang="sa" class="sa2">sītā ṛcchati → * <mark>sītacchati</mark></span><br>Sita goes.<br></p></li></ul></p><p>The fix is another <span lang="sa" class="sa2">paribhāṣā</span> about how to perform a substitution:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">उरण्रपरः। १.१.५१</span><br><span lang="sa" class="sa2">uraṇraparaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/1/1/51" target="_blank">1.1.51</a>)<br><span lang="sa" class="sa2">uḥ aṇ ra-paraḥ</span><br>[In substitution,] an <span lang="sa" class="sa2">aṇ</span> vowel that replaces an <span lang="sa" class="sa2">ṛ</span> is followed by <span lang="sa" class="sa2">r</span>.</p></li></ul></p><p>And with this rule in hand, we can perform the substitution correctly and get
+the desired result.</p><h2>Two similar vowels</h2><p>Finally, we can return to the example from the start of this lesson and
+complete our basic picture of vowel sandhi. Recall the example we wish to
+model:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">द्रौपदी इन्द्रम् → द्रौपदीन्द्रम्</span><br><span lang="sa" class="sa2">draupadī indram → draupadīndram</span><br></p></li></ul></p><p>To handle this special case, we just need a new rule:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">अकः सवर्णे दीर्घः। ६.१.१०१</span><br><span lang="sa" class="sa2">akaḥ savarṇe dīrghaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/101" target="_blank">6.1.101</a>)<br><span lang="sa" class="sa2">akaḥ savarṇe dīrghaḥ </span><br><span lang="sa" class="sa2">ak</span> and a following <span lang="sa" class="sa2">savarṇa</span> [vowel] become a <span lang="sa" class="sa2">dīrgha</span> (long) [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p>The meaning of this rule is clear. And with rule 1.1.50 (<span lang="sa" class="sa2">sthāne'ntaratamaḥ</span>), it is also
+clear what the result should be for each vowel:</p><p><ul class="examples"><li><p><span lang="sa" class="sa1">अ + अ → आ</span><br><span lang="sa" class="sa2">a + a → ā</span><br></p></li><li><p><span lang="sa" class="sa1">इ + इ → ई</span><br><span lang="sa" class="sa2">i + i → ī</span><br></p></li><li><p><span lang="sa" class="sa1">उ + उ → ऊ</span><br><span lang="sa" class="sa2">u + u → ū</span><br></p></li><li><p><span lang="sa" class="sa1">ऋ + ऋ → ॠ</span><br><span lang="sa" class="sa2">ṛ + ṛ → ṝ</span><br></p></li></ul></p><h2>Review</h2><p>With just a few short rules, we have fully characterized the basic patterns of
+<span lang="sa" class="sa2">ac</span> sandhi. This is the power the Pāṇinian system gives us. As a quick
+review, here are the main rules of vowel sandhi:</p><p><ul class="examples vyakarana"><li><p><span lang="sa" class="sa1">इको यणचि। ६.१.७७</span><br><span lang="sa" class="sa2">iko yaṇaci</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/77" target="_blank">6.1.77</a>)<br><span lang="sa" class="sa2">ikaḥ yaṇ aci</span><br>An <span lang="sa" class="sa2">ik</span> vowel is replaced by its respective <span lang="sa" class="sa2">yaṇ</span> sound when a vowel follows [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li><li><p><span lang="sa" class="sa1">आद्गुणः। ६.१.८७</span><br><span lang="sa" class="sa2">ādguṇaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/87" target="_blank">6.1.87</a>)<br><span lang="sa" class="sa2">āt guṇaḥ</span><br><span lang="sa" class="sa2">a</span> [and the following vowel] become [a single] <span lang="sa" class="sa2">guṇa</span> [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li><li><p><span lang="sa" class="sa1">वृद्धिरेचि। ६.१.८८</span><br><span lang="sa" class="sa2">vṛddhireci</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/88" target="_blank">6.1.88</a>)<br><span lang="sa" class="sa2">vṛddhiḥ eci</span><br>[<span lang="sa" class="sa2">a</span> and the following] <span lang="sa" class="sa2">ec</span> vowel become [a single] <span lang="sa" class="sa2">vṛddhi</span> [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li><li><p><span lang="sa" class="sa1">अकः सवर्णे दीर्घः। ६.१.१०१</span><br><span lang="sa" class="sa2">akaḥ savarṇe dīrghaḥ</span> (<a href="https://ashtadhyayi.com/sutraani/6/1/101" target="_blank">6.1.101</a>)<br><span lang="sa" class="sa2">akaḥ savarṇe dīrghaḥ </span><br><span lang="sa" class="sa2">ak</span> and a following <span lang="sa" class="sa2">savarṇa</span> [vowel] become a <span lang="sa" class="sa2">dīrgha</span> (long) [in <span lang="sa" class="sa2">saṃhitā</span>].</p></li></ul></p><p>In the next lesson, we will explore a critical problem with our current system
+and learn how Pāṇini decides to solve it.
+</p>
+    </article>
+  </div>
+  
+</main>
+<footer class="f6 tc pa1">
+    <p>
+    <a href="../../../index.html">Home</a> |
+    <a href="../../../guide.html">Grammar</a> |
+    <a href="../../../tools.html">Tools</a> |
+    <a href="../../../resources.html">Resources</a> |
+    <a href="../../../contact.html">Contact</a>
+    <br />
+    <p>This page is available under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 International</a> license.</p>
+</footer>
+
+        
+        
+        <script type="text/javascript" src="../../../static/gen/main.js%3Faedd17b5"></script>
+        
+        
+	</body>
+</html>
